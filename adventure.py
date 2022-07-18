@@ -134,6 +134,23 @@ def firstChoice5():
         time.sleep(3)
         firstChoice5()
 
+def firstChoice5_2():
+    global sysadminName
+    print(f"You swing the door open and sprint like an Olympian off in to the distance")
+    time.sleep(5)
+    print("")
+    print(f"You finally slow down as the building disappears out of sight")
+    print(f"")
+    time.sleep(5)
+    print(".....")
+    print("")
+    time.sleep(5)
+    print(f"You snap back to reality.")
+    time.sleep(3)
+    print("What? You didn't think we were actually running, did you? There is a heat wave!")
+    time.sleep(5)
+    print("Try again in ")
+
 
 def firstChoice5_1():
     global sysadminName
@@ -154,7 +171,11 @@ def firstChoice5_1():
     print(f"")
     firstChoice5_1_input = input(f"What are we eating? ")
     if firstChoice5_1_input == "1":
+        print(f"")
+        time.sleep(2)
         print(f"You go to the drive thru and order a feast: A 3 chicken strip meal, a honey barbecue chicken strip sandwich on Texas Toast meal, Large onion rings, a large milkshake, a large sweet tea, and a triple bacon whataburger meal")
+        print(f"")
+        time.sleep(3)
         print(f"You get home quickly (Of course within the speed limit!!!) and you dig in to the feast!")
         time.sleep(3)
         print(f"You pass out in a food coma.")
@@ -167,7 +188,22 @@ def firstChoice5_1():
         print(f"Returning to the start sequence")
         pregame()
     elif firstChoice5_1_input == "2":
-        print(f"You passed the test!")
+        print(f"")
+        time.sleep(2)
+        print(f"You go to the drive thru and order a feast: A 20 piece spicy nugget meal, two McRibs, 3 McDoubles, a large mango smoothie, a big mac, and a large sweet tea, and a quarter pounder")
+        print(f"")
+        time.sleep(3)
+        print(f"You get home quickly (Of course within the speed limit!!!) and you dig in to the feast!")
+        time.sleep(3)
+        print(f"You pass out in a food coma.")
+        time.sleep(3)
+        print(f"Your phone buzzes and buzzes and buzzes but you toss it across the room and go back to sleep")
+        time.sleep(3)
+        print(f"SURPRISE!!!!!!!")
+        print(f"Congrats you won the game!")
+        print(f"Thank you for playing")
+        print(f"Returning to the start sequence")
+        pregame()
     else:
         print(f"....")
         time.sleep(5)
