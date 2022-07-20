@@ -118,9 +118,9 @@ def firstChoice5():
     if firstChoice5Input == "1":
         firstChoice5_1()
     elif firstChoice5Input == "2":
-        firstChoice5_2
+        firstChoice5_2()
     elif firstChoice5Input == "3":
-        firstChoice5_3
+        firstChoice5_3()
     else:
         print("The car explodes. The end.")
         time.sleep(2)
@@ -145,11 +145,18 @@ def firstChoice5_2():
     print(".....")
     print("")
     time.sleep(5)
-    print(f"You snap back to reality.")
+    print(f"You snap back to reality in your car with your manager standing outside.")
     time.sleep(3)
     print("What? You didn't think we were actually running, did you? There is a heat wave!")
     time.sleep(5)
-    print("Try again in ")
+    print("Try again in: ")
+    time.sleep(2)
+    print(f"3")
+    time.sleep(2)
+    print(f"2")
+    time.sleep(2)
+    print(f"1")
+    firstChoice5()
 
 
 def firstChoice5_1():
@@ -183,9 +190,19 @@ def firstChoice5_1():
         print(f"Your phone buzzes and buzzes and buzzes but you toss it across the room and go back to sleep")
         time.sleep(3)
         print(f"SURPRISE!!!!!!!")
-        print(f"Congrats you won the game!")
+        time.sleep(1)
+        print(f"Congrats you won the game! Did you expect that this would be the correct ending?")
+        time.sleep(1)
         print(f"Thank you for playing")
-        print(f"Returning to the start sequence")
+        time.sleep(1)
+        print(f"Returning to the start sequence in: ")
+        time.sleep(1)
+        print(f"3")
+        time.sleep(2)
+        print(f"2")
+        time.sleep(2)
+        print(f"1")
+        time.sleep(2)
         pregame()
     elif firstChoice5_1_input == "2":
         print(f"")
@@ -200,15 +217,27 @@ def firstChoice5_1():
         print(f"Your phone buzzes and buzzes and buzzes but you toss it across the room and go back to sleep")
         time.sleep(3)
         print(f"SURPRISE!!!!!!!")
-        print(f"Congrats you won the game!")
+        time.sleep(1)
+        print(f"Congrats you won the game! Did you expect that this would be the correct ending?")
+        time.sleep(1)
         print(f"Thank you for playing")
-        print(f"Returning to the start sequence")
+        time.sleep(1)
+        print(f"Returning to the start sequence in: ")
+        time.sleep(1)
+        print(f"3")
+        time.sleep(2)
+        print(f"2")
+        time.sleep(2)
+        print(f"1")
+        time.sleep(2)
         pregame()
     else:
         print(f"....")
         time.sleep(5)
         print(f"....")
         time.sleep(5)
+        print(f"\"Was that a dream???\"")
+        print(f"")
         print(f"You wake up")
         time.sleep(5)
         print(f"An incoherent string of text is on your screen and your face is imprinted with the keys from your keyboard")
@@ -218,9 +247,20 @@ def firstChoice5_1():
         time.sleep(6)
         print(f"....")
         time.sleep(6)
-        print(f"Just kidding! We aren't making you start over! But please only select between 1 and 2 for your restaurant")
+        print(f"Just kidding! We aren't making you start all the way over! But please only select between 1 and 2 for your restaurant")
         time.sleep(3)
         firstChoice5_1()
+
+def firstChoice5_3():
+    global sysadminName
+    print(f"Damn. You accept your fate and open the door to talk to your manager")
+    time.sleep(5)
+    print(f"Hey {sysadminName}! Did you see the Cowboys game last night? This is our year!")
+    time.sleep(5)
+    print(f"\"Cowboys fans.... every year is their year. I wasn't even alive the last time they won something\" you think to yourself")
+    time.sleep(5 )
+    print("You continue to humor your manager while covering the Giants logo on your steering wheel.")
+    time.sleep(5)
     
 def pregame():
     print("")
