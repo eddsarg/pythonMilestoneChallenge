@@ -87,6 +87,7 @@ def game():
 ########################################################################################################################
 def firstChoice3():
     print("You go to check out the coffee machine. What should you do?")
+    time.sleep(3)
 
     print(f"    ##################################################################################################################################")
     print(f"    #  1. Go back to your desk and close the ticket with no response")
@@ -121,13 +122,17 @@ def firstChoice3():
         print(f"Executing your (but not really \"yours\") new choice now!!")
         time.sleep(5)
         if randomNumber == 1:
-            firstChoice3_1()
+            print(f"Path 1 was taken")
+            #firstChoice3_1()
         elif randomNumber == 2:
-            firstChoice3_2
+            print(f"Path 1 was taken")
+            #firstChoice3_2
         elif randomNumber == 3:
-            firstChoice3_3
+            print(f"Path 1 was taken")
+            #firstChoice3_3
         else:
-            firstChoice3_4
+            print(f"Path 4 was taken")
+            #firstChoice3_4
 
 
 ########################################################################################################################
