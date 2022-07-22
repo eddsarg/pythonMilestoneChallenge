@@ -178,7 +178,7 @@ resource "aws_instance" "pythonLab" {
   }
 
   tags = {
-      Name = "allow_ec2"
+      Name = "pspy-ec2-eddsarg"
   }
 }
 
