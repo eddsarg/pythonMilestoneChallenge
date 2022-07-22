@@ -154,12 +154,12 @@ data "aws_ami" "Windows" {
   most_recent = true
   
   filter {
-    Name = "name"
+    name = "name"
     values = ["Windows_Server-2019-English-Full-Base-*"]
   }
 
   filter {
-    Name = "virtualization-type"
+    name = "virtualization-type"
     values = ["hvm"]
   }
   owners = ["801119661308"] # Amazon Owner ID
@@ -181,7 +181,7 @@ resource "aws_instance" "pythonLab" {
 # Security Groups
 
 resource "aws_security_group" "allow_EC2" {
-  Name = "allow_EC2"
+  name = "allow_EC2"
   description = "allow remote access to ec2"
   vpc_id = aws_vpc.main.id
 
