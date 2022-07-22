@@ -176,6 +176,10 @@ resource "aws_instance" "pythonLab" {
   lifecycle {
     ignore_changes = [ami]
   }
+
+  tags = {
+      Name = "allow_ec2"
+  }
 }
 
 # Security Groups
