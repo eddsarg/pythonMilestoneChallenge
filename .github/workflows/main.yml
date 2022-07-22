@@ -1,0 +1,40 @@
+
+name: Deploy Terraform 
+
+on: [push]
+
+env:
+ AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+ AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+ AWS_SESSION_TOKEN: ${{secrets.AWS_SESSION_TOKEN}}
+ AWS_DEFAULT_REGION: ${{secrets.AWS_REGION}}
+
+jobs:
+  Terrraform:
+    name: Terraform Plan & Apply
+    runs-on: ubuntu-latest
+    steps:
+    
+     - name: Checkout Repo
+       uses: actions/checkout@v3
+       
+     - name: Terraform Setup
+       uses: hashicorp/setup-terraform@v2
+     
+     - name: Terraform Init
+       working-directory: './'
+       run: terraform init
+       env:
+         AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+         AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+         AWS_SESSION_TOKEN: ${{secrets.AWS_SESSION_TOKEN}}
+         AWS_DEFAULT_REGION: ${{secrets.AWS_REGION}}
+       
+     - name: Terraform Apply
+       working-directory: '.'
+       run: terraform apply -auto-approve
+       env:
+        AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+        AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+        AWS_SESSION_TOKEN: ${{secrets.AWS_SESSION_TOKEN}}
+        AWS_DEFAULT_REGION: ${{secrets.AWS_REGION}}
