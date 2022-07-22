@@ -19,7 +19,7 @@ resource "aws_vpc" "main" {
     instance_tenancy = "default"
 
     tags = {
-        name = "main_vpc"
+        Name = "pspyVPC-eddsarg"
     }
 }
 
@@ -154,12 +154,12 @@ data "aws_ami" "Windows" {
   most_recent = true
   
   filter {
-    name = "name"
+    Name = "name"
     values = ["Windows_Server-2019-English-Full-Base-*"]
   }
 
   filter {
-    name = "virtualization-type"
+    Name = "virtualization-type"
     values = ["hvm"]
   }
   owners = ["801119661308"] # Amazon Owner ID
@@ -170,7 +170,7 @@ resource "aws_instance" "pythonLab" {
   instance_type = "t2.xlarge"
   associate_public_ip_address = true
   subnet_id = aws_subnet.main.id
-  key_name = "Py_PS_key_pair"
+  key_Name = "Py_PS_key_pair"
   vpc_security_group_ids = [aws_security_group.allow_EC2.id]
 
   lifecycle {
@@ -181,7 +181,7 @@ resource "aws_instance" "pythonLab" {
 # Security Groups
 
 resource "aws_security_group" "allow_EC2" {
-  name = "allow_EC2"
+  Name = "allow_EC2"
   description = "allow remote access to ec2"
   vpc_id = aws_vpc.main.id
 
