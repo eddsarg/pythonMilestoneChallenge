@@ -35,18 +35,15 @@ def game():
     print(f"\"Time to get back to work and do these tickets in my queue: \"")
     time.sleep(3)
     print(f"    ##################################################################################################################################")
-    print(f"    #  1. \"We are unable to upload anything to the SFTP servers. This is impacting our customers\"")
-    print(f"    #                                                                                     - Scott, business manager")
-    print(f"    #")
-    print(f"    #  2. \"Multiple users report that sometimes when they come back in to the office, they are unable to connect to the internet\"")
+    print(f"    #  1. \"Multiple users report that sometimes when they come back in to the office, they are unable to connect to the internet\"")
     print(f"    #                                                                                     - Eli, Helpdesk Tech")
     print(f"    #")
-    print(f"    #  3. \"The coffee machine is broken\"")
+    print(f"    #  2. \"The coffee machine is broken\"")
     print(f"    #                            - Matt, accountant")
     print(f"    #")
-    print(f"    #  4. \"Go home\"")
+    print(f"    #  3. \"Go home\"")
     print(f"    #")
-    print(f"    #  5. You probably shouldn't do this one but... give it a try and see what happens!")
+    print(f"    #  4. You probably shouldn't do this one but... give it a try and see what happens!")
     print(f"    ##################################################################################################################################")
     print(f"")
     
@@ -61,10 +58,8 @@ def game():
     elif firstChoice == "3":
         firstChoice3()
     elif firstChoice == "4":
-        firstChoice4()
-    elif firstChoice == "5":
         print(f"You navigate to the root directory of each hypervisor and you try this cool trick that you read on reddit from the subreddit r/linuxmemes")
-        time.sleep(3)
+        time.sleep(8)
         print(f"rm -rf")
         time.sleep(3)
         print(f"The screen turns black. \"Everything is Broken Corp\" is now \"Everything is On Fire Corp\".")
@@ -79,13 +74,74 @@ def game():
         time.sleep(3)
         game()
     else:
-        print(f"Invalid choice. Please choose a number between 1 and 5.")
+        print(f"Invalid choice. Please choose a number between 1 and 4.")
         game()
 
 ########################################################################################################################
-#CHOICE 3 SEQUENCE
+#CHOICE 1 SEQUENCE
 ########################################################################################################################
-def firstChoice3():
+def firstChoice1():
+    print(f"You remote in to the Domain Controller that has a DHCP role.")
+    print(f"What will you do?")
+    time.sleep(6)
+    print(f"    ##################################################################################################################################")
+    print(f"    #  1. Check the logs")
+    print(f"    #")
+    print(f"    #  2. Delete the logs")
+    print(f"    #")
+    print(f"    ##################################################################################################################################")
+    print(f"")
+
+    firstChoice1Input = input(f"Select a choice: ")
+
+    if firstChoice1Input == "1":
+        print(f"Woah! Slow down buddy. You're not doing actual work are you??? Did you forget the name of the game??? Let me remind you: ")
+        time.sleep(2)
+        print("")
+        print("")
+        time.sleep(2)
+        print(f"    #########################################")
+        time.sleep(2)
+        print(f"    Welcome to Terrible Sysadmin Simulator!")
+        time.sleep(2)
+        print(f"    #########################################")
+        time.sleep(2)
+        print()
+        print()
+        print(f"Let's rewind this in: ")
+        time.sleep(2)
+        print(f"3")
+        time.sleep(2)
+        print(f"2")
+        time.sleep(2)
+        print(f"1")
+        time.sleep(3)
+        firstChoice1()
+    elif firstChoice1Input == "2":
+        print("You delete the logs then log out of the server")
+        time.sleep(3)
+        print("You close the ticket and leave the office after a hard minute's work")
+        time.sleep(5)
+        print(f"You go home and take a nap")
+        time.sleep(5)
+        print(f"You wake up to a voicemail from your Director telling you that you are fired")
+        time.sleep(3)
+        print(f"....")
+        time.sleep(3)
+        print(f"....")
+        time.sleep(5)
+        print(f"Congrats you win!")
+        pregame()
+    else:
+        print("Select 1 or 2")
+        firstChoice1()
+
+
+
+########################################################################################################################
+#CHOICE 2 SEQUENCE
+########################################################################################################################
+def firstChoice2():
     print("You go to check out the coffee machine. What should you do?")
     time.sleep(3)
 
@@ -101,16 +157,16 @@ def firstChoice3():
     print(f"    ##################################################################################################################################")
     print(f"")
 
-    firstChoice3Input = input(f"Select a choice: ")
+    firstChoice2Input = input(f"Select a choice: ")
 
-    if firstChoice3Input == "1":
-        firstChoice3_1()
-    elif firstChoice3Input == "2":
-        firstChoice3_2()
-    elif firstChoice3Input == "3":
-        firstChoice3_3()
-    elif firstChoice3Input == "4":
-        firstChoice3_3()
+    if firstChoice2Input == "1":
+        firstChoice2_1()
+    elif firstChoice2Input == "2":
+        firstChoice2_2()
+    elif firstChoice2Input == "3":
+        firstChoice2_3()
+    elif firstChoice2Input == "4":
+        firstChoice2_4()
     else:
         randomNumber = random.randint(1,4)
         print(f"Invalid input. We thought about looping you back to this prompt again and requesting that you only choose a valid number. However, I thought that now would be a good time to try the \"random\" method. A random VALID number will now be chosen for you.")
@@ -122,24 +178,174 @@ def firstChoice3():
         print(f"Executing your (but not really \"yours\") new choice now!!")
         time.sleep(5)
         if randomNumber == 1:
-            print(f"Path 1 was taken")
-            #firstChoice3_1()
+            firstChoice2_1()
         elif randomNumber == 2:
-            print(f"Path 1 was taken")
-            #firstChoice3_2
+            firstChoice2_2()
         elif randomNumber == 3:
-            print(f"Path 1 was taken")
-            #firstChoice3_3
+            firstChoice2_3()
         else:
-            print(f"Path 4 was taken")
-            #firstChoice3_4
+            firstChoice2_4()
+    
+def firstChoice2_4():
+    print(f"\"The firewalls have been consistently reporting high temps,\" you think to yourself.")
+    time.sleep(3)
+    print(f"You go in to the network closet and find your two firewalls. As usual they feel pretty heated.. at least more so than normal.")
+    time.sleep(3)
+    print(f"You pour the coffee on to the appliances. Sparks fly and the network closet gets a little quieter.")
+    time.sleep(3)
+    print(f"The firewall cools down.")
+    time.sleep(3)
+    print(f"You walk out and head to your car, deciding to get something to eat and head home.")
+    time.sleep(7)
+    print(f"You pass a Whataburger and a McDonald's.")
+    print(f"")
+    print(f"    ##################################################################################################################################")
+    print(f"    #  1. Whataburger")
+    print(f"    #")
+    print(f"    #  2. McDonald's")
+    print(f"    #")
+    print(f"    ##################################################################################################################################")
+    print(f"")
+    firstChoice2_4_input = input(f"What are we eating? ")
+    if firstChoice2_4_input == "1":
+        print(f"")
+        time.sleep(2)
+        print(f"You go to the drive thru and order a feast: A 3 chicken strip meal, a honey barbecue chicken strip sandwich on Texas Toast meal, Large onion rings, a large milkshake, a large sweet tea, and a triple bacon whataburger meal")
+        print(f"")
+        time.sleep(3)
+        print(f"You get home quickly (Of course within the speed limit!!!) and you dig in to the feast!")
+        time.sleep(3)
+        print(f"You pass out in a food coma.")
+        time.sleep(3)
+        print(f"Your phone buzzes and buzzes and buzzes but you toss it across the room and go back to sleep")
+        time.sleep(3)
+        print(f"SURPRISE!!!!!!!")
+        time.sleep(1)
+        print(f"The Police come in and arrest you!")
+        time.sleep(1)
+        time.sleep(1)
+        print(f"Rewinding the sequence in: ")
+        time.sleep(1)
+        print(f"3")
+        time.sleep(2)
+        print(f"2")
+        time.sleep(2)
+        print(f"1")
+        time.sleep(2)
+        game()
+    elif firstChoice2_4_input == "2":
+        print(f"")
+        time.sleep(2)
+        print(f"You go to the drive thru and order a feast: A 20 piece spicy nugget meal, two McRibs, 3 McDoubles, a large mango smoothie, a big mac, and a large sweet tea, and a quarter pounder")
+        print(f"")
+        time.sleep(3)
+        print(f"You get home quickly (Of course within the speed limit!!!) and you dig in to the feast!")
+        time.sleep(3)
+        print(f"You pass out in a food coma.")
+        time.sleep(3)
+        print(f"Your phone buzzes and buzzes and buzzes but you toss it across the room and go back to sleep")
+        time.sleep(3)
+        print(f"SURPRISE!!!!!!!")
+        time.sleep(1)
+        print(f"The Police come in and arrest you!")
+        time.sleep(1)
+        time.sleep(1)
+        print(f"Rewinding the sequence in: ")
+        time.sleep(1)
+        print(f"3")
+        time.sleep(2)
+        print(f"2")
+        time.sleep(2)
+        print(f"1")
+        time.sleep(2)
+        game()
+    else:
+        print(f"Please choose 1 or 2. Rewinding sequence in: ")
+        time.sleep(1)
+        print(f"3")
+        time.sleep(2)
+        print(f"2")
+        time.sleep(2)
+        print(f"1")
+        time.sleep(2)
+        firstChoice2_4()
 
+def firstChoice2_2():
+    print(f"You choose to investigate the coffee machine more.")
+    time.sleep(3)
+    print(f"You notice the machine begins to heat up more.")
+    time.sleep(5)
+    print(f"You click the off switch")
+    time.sleep(5)
+    print(f"It seems that it does not work. The machine continues to heat up")
+    time.sleep(5)
+    print(f"You now unplug the machine!")
+    time.sleep(5)
+    print(f"Nothing happens! The pot begins to turn red and the coffee is violently boiling.")
+    time.sleep(5)
+    print(f"A burning smell permeates the room")
+    time.sleep(5)
+    print(f"The machine explodes and the room is on fire")
+    time.sleep(5)
+    print(f"You get everyone out of the building")
+    time.sleep(5)
+    print(f"Eventually the Fire department and Police arrive.")
+    time.sleep(5)
+    print(f"You approach them to speak to them and next thing you know you're on the ground getting put in to cuffs")
+    time.sleep(5)
+    print(f"It appears you have been accused and all of those years of weaponized incompetence has caught up with you. No one believes your absolutely ridiculous story.")
+    time.sleep(10)
+    print(f"Really... Who is going to believe some clown that tells you \"the coffee machine kept heating up after I unplugged it.\" What is this, Tom and Jerry?")
+    time.sleep(10)
+    print(f"Rewinding sequence in: ")
+    time.sleep(1)
+    print(f"3")
+    time.sleep(2)
+    print(f"2")
+    time.sleep(2)
+    print(f"1")
+    time.sleep(2)
+    game()
+
+def firstChoice2_3():
+    print(f"You grab the pot and notice that it is still hot, despite being broken???")
+    time.sleep(4)
+    print(f"You drink the coffee straight from the pot.")
+    time.sleep(4)
+    print(f"You burn your mouth and throat")
+    time.sleep(4)
+    print(f"You end up in the ER.")
+    time.sleep(4)
+    print(f"Looks like you aren't going home anytime soon, genius")
+    time.sleep(4)
+    print(f"Rewinding sequence in: ")
+    time.sleep(1)
+    print(f"3")
+    time.sleep(2)
+    print(f"2")
+    time.sleep(2)
+    print(f"1")
+    time.sleep(2)
+    firstChoice2()
+
+def firstChoice2_1():
+    print(f"You shrug your shoulders")
+    time.sleep(2)
+    print(f"\"Not my problem. I'm closing this ticket. Knowing Accounting, they will probably reopen it though....\"")
+    time.sleep(2)
+    print(f"....")
+    time.sleep(2)
+    print(f"....")
+    time.sleep(2)
+    print(f"You doze off....")
+    time.sleep(10)
+    game()
 
 ########################################################################################################################
-#CHOICE 4 SEQUENCE
+#CHOICE 3 SEQUENCE
 ########################################################################################################################
 
-def firstChoice4():
+def firstChoice3():
     global sysadminName
     print(f"You get up and collect your things and book it towards the exit of the building")
     time.sleep(3)
@@ -168,14 +374,14 @@ def firstChoice4():
     print(f"    ##################################################################################################################################")
     print(f"")
 
-    firstChoice4Input = input(f"what do you do? ")
+    firstChoice3Input = input(f"what do you do? ")
 
-    if firstChoice4Input == "1":
-        firstChoice4_1()
-    elif firstChoice4Input == "2":
-        firstChoice4_2()
-    elif firstChoice4Input == "3":
-        firstChoice4_3()
+    if firstChoice3Input == "1":
+        firstChoice3_1()
+    elif firstChoice3Input == "2":
+        firstChoice3_2()
+    elif firstChoice3Input == "3":
+        firstChoice3_3()
     else:
         print("The car explodes. The end.")
         time.sleep(2)
@@ -187,9 +393,9 @@ def firstChoice4():
         time.sleep(3)
         print("1")
         time.sleep(3)
-        firstChoice4()
+        firstChoice3()
 
-def firstChoice4_2():
+def firstChoice3_2():
     global sysadminName
     print(f"You swing the door open and sprint like an Olympian off in to the distance")
     time.sleep(5)
@@ -211,10 +417,10 @@ def firstChoice4_2():
     print(f"2")
     time.sleep(2)
     print(f"1")
-    firstChoice4()
+    firstChoice3()
 
 
-def firstChoice4_1():
+def firstChoice3_1():
     global sysadminName
     print(f"You freeze and remain in a statue like state for several minutes.")
     time.sleep(3)
@@ -231,8 +437,8 @@ def firstChoice4_1():
     print(f"    #")
     print(f"    ##################################################################################################################################")
     print(f"")
-    firstChoice4_1_input = input(f"What are we eating? ")
-    if firstChoice4_1_input == "1":
+    firstChoice3_1_input = input(f"What are we eating? ")
+    if firstChoice3_1_input == "1":
         print(f"")
         time.sleep(2)
         print(f"You go to the drive thru and order a feast: A 3 chicken strip meal, a honey barbecue chicken strip sandwich on Texas Toast meal, Large onion rings, a large milkshake, a large sweet tea, and a triple bacon whataburger meal")
@@ -259,7 +465,7 @@ def firstChoice4_1():
         print(f"1")
         time.sleep(2)
         pregame()
-    elif firstChoice4_1_input == "2":
+    elif firstChoice3_1_input == "2":
         print(f"")
         time.sleep(2)
         print(f"You go to the drive thru and order a feast: A 20 piece spicy nugget meal, two McRibs, 3 McDoubles, a large mango smoothie, a big mac, and a large sweet tea, and a quarter pounder")
@@ -304,9 +510,9 @@ def firstChoice4_1():
         time.sleep(6)
         print(f"Just kidding! We aren't making you start all the way over! But please only select between 1 and 2 for your restaurant")
         time.sleep(3)
-        firstChoice4_1()
+        firstChoice3_1()
 
-def firstChoice4_3():
+def firstChoice3_3():
     global sysadminName
     print(f"Damn. You accept your fate and open the door to talk to your manager")
     time.sleep(5)
@@ -328,7 +534,7 @@ def firstChoice4_3():
     time.sleep(2)
     print(f"1")
     time.sleep(2)
-    firstChoice4()
+    firstChoice3()
     
 def pregame():
     print("")
