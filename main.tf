@@ -170,7 +170,7 @@ resource "aws_instance" "pythonLab" {
   instance_type = "t2.xlarge"
   associate_public_ip_address = true
   subnet_id = aws_subnet.main.id
-  key_Name = "Py_PS_key_pair"
+  key_name = "Py_PS_key_pair"
   vpc_security_group_ids = [aws_security_group.allow_EC2.id]
 
   lifecycle {
